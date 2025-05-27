@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizador de PDF</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Evita barras de rolagem no corpo da página */
+        }
+        .pdf-viewer {
+            width: 100vw; /* 100% da largura da viewport */
+            height: 100vh; /* 100% da altura da viewport */
+            border: none; /* Remove a borda padrão do iframe */
+        }
+    </style>
+</head>
+<body>
+    <!-- Opção 1: Usando <iframe> (Recomendado) -->
+    <iframe class="pdf-viewer" src="seu-arquivo.pdf" type="application/pdf">
+        <p>Seu navegador não suporta a visualização de PDFs embutidos.
+           Você pode <a href="seu-arquivo.pdf">baixar o PDF aqui</a>.
+        </p>
+    </iframe>
+
+    <!-- Opção 2: Usando <embed> (Alternativa) -->
+    <!-- Se for usar esta, comente ou remova a <iframe> acima -->
+    <!--
+    <embed class="pdf-viewer" src="seu-arquivo.pdf" type="application/pdf" />
+    -->
+</body>
+</html>
